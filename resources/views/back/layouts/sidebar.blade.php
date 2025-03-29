@@ -62,21 +62,21 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="" class="menu-link">
-                        <div class="text-truncate" data-i18n="Without menu">Produk</div>
+                        <div class="text-truncate" data-i18n="Produk">Produk</div>
                     </a>
                 </li>
             </ul>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="" class="menu-link">
-                        <div class="text-truncate" data-i18n="Without menu">Workshop</div>
+                        <div class="text-truncate" data-i18n="Workshop">Workshop</div>
                     </a>
                 </li>
             </ul>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="" class="menu-link">
-                        <div class="text-truncate" data-i18n="Without menu">Sertifikasi</div>
+                        <div class="text-truncate" data-i18n="Sertifikasi">Sertifikasi</div>
                     </a>
                 </li>
             </ul>
@@ -94,33 +94,9 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/landing-page.html"
+                    <a href="{{ URL::to('back/master/pengguna') }}"
                         class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Landing">Landing</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/pricing-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Pricing">Pricing</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/payment-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Payment">Payment</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/checkout-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Checkout">Checkout</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/help-center-landing.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Help Center">Help Center</div>
+                        <div class="text-truncate" data-i18n="Pengguna">Pengguna</div>
                     </a>
                 </li>
             </ul>
