@@ -95,7 +95,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="{{ URL::to('back/master/pengguna') }}"
-                        class="menu-link" target="_blank">
+                        class="menu-link">
                         <div class="text-truncate" data-i18n="Pengguna">Pengguna</div>
                     </a>
                 </li>
