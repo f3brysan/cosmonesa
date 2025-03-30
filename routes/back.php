@@ -11,5 +11,6 @@ Route::get('/', function () {
 Route::get('dashboard', [B_DashboardController::class, 'index']); 
 
 // API RAJA ONGKIR
-Route::get('/provinces', [ApiRajaOngkirController::class, 'getProvinces']);
-Route::get('/cities/{id}', [ApiRajaOngkirController::class, 'getCities']);
+Route::get('api/provinces', [ApiRajaOngkirController::class, 'getProvinces']);
+Route::get('api/cities/{id}', [ApiRajaOngkirController::class, 'getCities']);
+Route::post('api/checkOngkir', [ApiRajaOngkirController::class, 'checkOngkir']);
