@@ -16,9 +16,8 @@ class OauthController extends Controller
     public function handleProviderCallback()
     {
         try {
-            $user = Socialite::driver('google')->user();
-            dd($user);
-
+            
+            $user = Socialite::driver('google')->user();             
             $finduser = User::where('gauth_id', $user->id)->first();
 
             if($finduser){
@@ -36,11 +35,13 @@ class OauthController extends Controller
                     'password' => encrypt('cosmonesa!@#')
                 ]);
 
+                $newUser->assignRole('customer');
+
                 Auth::login($newUser);
 
                 return redirect('/dashboard');
             }
-        } catch (\Throwable $th) {
+        } catch (\Exception $th) {
             dd($th->getMessage());
         }
     }

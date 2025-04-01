@@ -9,9 +9,6 @@ use App\Http\Controllers\Frontend\F_DashboardController;
 
 Route::get('/', [F_DashboardController::class, 'index']);
 Route::get('/book', [F_AppointmentController::class, 'index']);
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/login', function () {
     return view('auth.login');
