@@ -19,11 +19,15 @@ class OauthController extends Controller
             
             $user = Socialite::driver('google')->user();             
             $finduser = User::where('gauth_id', $user->id)->first();
-
+            
             if($finduser){
 
-                Auth::login($finduser);
+                $getUser = Auth::login($finduser);
 
+                if($finduser->hasRole(['superadmin', 'pengelola', 'seller'])){
+                    return redirect()->intended('back/dashboard');
+                }
+                
                 return redirect('/dashboard');
 
             }else{
