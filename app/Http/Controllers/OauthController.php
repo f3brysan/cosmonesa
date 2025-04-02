@@ -18,7 +18,7 @@ class OauthController extends Controller
      * 
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleProviderCallback(): \Illuminate\Http\RedirectResponse
+    public function handleProviderCallback(Request $request): \Illuminate\Http\RedirectResponse
     {
         try {
             // Get the user from the OAuth provider
@@ -29,8 +29,8 @@ class OauthController extends Controller
 
             if ($finduser) {
                 // If the user exists, login the user
-                Auth::login($finduser);
-
+                $login = Auth::loginUsingId($finduser->id);
+               
                 // Redirect the user to the correct dashboard
                 if ($finduser->hasRole(['superadmin', 'pengelola', 'seller'])) {
                     return redirect()->intended('back/dashboard');
